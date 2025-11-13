@@ -1,0 +1,15 @@
+C:\Users\admin\Desktop\Fiap\IncludIA-Csharp\IncludIA.Infrastructure\bin\Debug\net9.0\IncludIA.Infrastructure.deps.json
+C:\Users\admin\Desktop\Fiap\IncludIA-Csharp\IncludIA.Infrastructure\bin\Debug\net9.0\IncludIA.Infrastructure.dll
+C:\Users\admin\Desktop\Fiap\IncludIA-Csharp\IncludIA.Infrastructure\bin\Debug\net9.0\IncludIA.Infrastructure.pdb
+C:\Users\admin\Desktop\Fiap\IncludIA-Csharp\IncludIA.Infrastructure\bin\Debug\net9.0\IncludIA.Domain.dll
+C:\Users\admin\Desktop\Fiap\IncludIA-Csharp\IncludIA.Infrastructure\bin\Debug\net9.0\IncludIA.Domain.pdb
+C:\Users\admin\Desktop\Fiap\IncludIA-Csharp\IncludIA.Infrastructure\obj\Debug\net9.0\IncludIA.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\admin\Desktop\Fiap\IncludIA-Csharp\IncludIA.Infrastructure\obj\Debug\net9.0\IncludIA.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\Desktop\Fiap\IncludIA-Csharp\IncludIA.Infrastructure\obj\Debug\net9.0\IncludIA.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\admin\Desktop\Fiap\IncludIA-Csharp\IncludIA.Infrastructure\obj\Debug\net9.0\IncludIA.Infrastructure.AssemblyInfo.cs
+C:\Users\admin\Desktop\Fiap\IncludIA-Csharp\IncludIA.Infrastructure\obj\Debug\net9.0\IncludIA.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\Fiap\IncludIA-Csharp\IncludIA.Infrastructure\obj\Debug\net9.0\IncludIA.3E9431AA.Up2Date
+C:\Users\admin\Desktop\Fiap\IncludIA-Csharp\IncludIA.Infrastructure\obj\Debug\net9.0\IncludIA.Infrastructure.dll
+C:\Users\admin\Desktop\Fiap\IncludIA-Csharp\IncludIA.Infrastructure\obj\Debug\net9.0\refint\IncludIA.Infrastructure.dll
+C:\Users\admin\Desktop\Fiap\IncludIA-Csharp\IncludIA.Infrastructure\obj\Debug\net9.0\IncludIA.Infrastructure.pdb
+C:\Users\admin\Desktop\Fiap\IncludIA-Csharp\IncludIA.Infrastructure\obj\Debug\net9.0\ref\IncludIA.Infrastructure.dll

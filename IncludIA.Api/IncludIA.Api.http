@@ -1,0 +1,6 @@
+@IncludIA.Api_HostAddress = http://localhost:5200
+
+GET {{IncludIA.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
