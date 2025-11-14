@@ -3,7 +3,7 @@ using Moq;
 using IncludIA.Domain.Interfaces;
 using IncludIA.Domain.Entities;
 using System.Threading.Tasks;
-using IncludIA.Application.Services;
+using IncludIA.Application.Service;
 
 namespace IncludIA.Tests
 {

@@ -1,6 +1,5 @@
 ﻿using Asp.Versioning;
 using IncludIA.Application.Service;
-using IncludIA.Application.Services;
 using IncludIA.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 

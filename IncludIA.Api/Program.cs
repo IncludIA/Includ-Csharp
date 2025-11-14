@@ -1,9 +1,9 @@
 using Asp.Versioning;
 using IncludIA.Application.Service;
-using IncludIA.Application.Services;
 using IncludIA.Domain.Interfaces;
 using IncludIA.Infrastructure.Context;
 using IncludIA.Infrastructure.Repositories;
+using Microsoft.EntityFrameworkCore;
 using OpenTelemetry.Trace;
 using Serilog;
 
@@ -32,6 +32,10 @@ builder.Services.AddSingleton<MongoDbContext>();
 builder.Services.AddScoped<InclusaoService>();
 builder.Services.AddScoped<IVagaRepository, VagaRepository>();
 builder.Services.AddScoped<VagaService>();
+
+builder.Services.AddDbContext<OracleDbContext>(options =>
+    options.UseOracle(builder.Configuration.GetConnectionString("OracleDb"))
+);
 
 builder.Services.AddApiVersioning(options =>
     {

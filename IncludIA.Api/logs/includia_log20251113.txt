@@ -419,3 +419,63 @@ System.OperationCanceledException: The operation was canceled.
 2025-11-13 22:45:17.039 -03:00 [INF] HTTP DELETE /api/v1/Vaga/691689494c0c7b521f8e90e7 responded 204 in 39.7563 ms
 2025-11-13 22:45:17.040 -03:00 [DBG] Connection id "0HNH33R0MFPLA" completed keep alive response.
 2025-11-13 22:45:17.041 -03:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5201/api/v1/Vaga/691689494c0c7b521f8e90e7 - 204 null null 48.6958ms
+2025-11-13 22:47:12.476 -03:00 [DBG] Connection id "0HNH33R0MFPLA" received FIN.
+2025-11-13 22:47:12.479 -03:00 [DBG] Connection id "0HNH33R0MFPLA" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-11-13 22:47:12.480 -03:00 [DBG] Connection id "0HNH33R0MFPLA" disconnecting.
+2025-11-13 22:47:12.488 -03:00 [DBG] Connection id "0HNH33R0MFPLA" stopped.
+2025-11-13 22:49:17.007 -03:00 [DBG] Connection id "0HNH33R0MFPLB" accepted.
+2025-11-13 22:49:17.010 -03:00 [DBG] Connection id "0HNH33R0MFPLB" started.
+2025-11-13 22:49:17.012 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5201/health - null null
+2025-11-13 22:49:17.014 -03:00 [DBG] 1 candidate(s) found for the request path '/health'
+2025-11-13 22:49:17.015 -03:00 [DBG] Request matched endpoint 'Health checks'
+2025-11-13 22:49:17.016 -03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-11-13 22:49:17.017 -03:00 [INF] Executing endpoint 'Health checks'
+2025-11-13 22:49:17.021 -03:00 [DBG] Running health checks
+2025-11-13 22:49:17.025 -03:00 [DBG] Health check processing with combined status "Healthy" completed after 2.4717ms
+2025-11-13 22:49:17.027 -03:00 [INF] Executed endpoint 'Health checks'
+2025-11-13 22:49:17.028 -03:00 [INF] HTTP GET /health responded 200 in 12.4011 ms
+2025-11-13 22:49:17.031 -03:00 [DBG] Connection id "0HNH33R0MFPLB" completed keep alive response.
+2025-11-13 22:49:17.032 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5201/health - 200 null text/plain 20.2756ms
+2025-11-13 22:49:17.105 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5201/favicon.ico - null null
+2025-11-13 22:49:17.108 -03:00 [DBG] No candidates found for the request path '/favicon.ico'
+2025-11-13 22:49:17.109 -03:00 [DBG] Request did not match any endpoints
+2025-11-13 22:49:17.110 -03:00 [DBG] The request path  does not match the path filter
+2025-11-13 22:49:17.111 -03:00 [INF] HTTP GET /favicon.ico responded 404 in 1.2446 ms
+2025-11-13 22:49:17.112 -03:00 [DBG] Connection id "0HNH33R0MFPLB" completed keep alive response.
+2025-11-13 22:49:17.114 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5201/favicon.ico - 404 0 null 8.791ms
+2025-11-13 22:49:17.117 -03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5201/favicon.ico, Response status code: 404
+2025-11-13 22:49:22.046 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5201/health - null null
+2025-11-13 22:49:22.049 -03:00 [DBG] 1 candidate(s) found for the request path '/health'
+2025-11-13 22:49:22.050 -03:00 [DBG] Request matched endpoint 'Health checks'
+2025-11-13 22:49:22.051 -03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-11-13 22:49:22.052 -03:00 [INF] Executing endpoint 'Health checks'
+2025-11-13 22:49:22.053 -03:00 [DBG] Running health checks
+2025-11-13 22:49:22.054 -03:00 [DBG] Health check processing with combined status "Healthy" completed after 0.7283ms
+2025-11-13 22:49:22.055 -03:00 [INF] Executed endpoint 'Health checks'
+2025-11-13 22:49:22.056 -03:00 [INF] HTTP GET /health responded 200 in 5.2284 ms
+2025-11-13 22:49:22.058 -03:00 [DBG] Connection id "0HNH33R0MFPLB" completed keep alive response.
+2025-11-13 22:49:22.060 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5201/health - 200 null text/plain 13.4775ms
+2025-11-13 22:49:22.898 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5201/health - null null
+2025-11-13 22:49:22.901 -03:00 [DBG] 1 candidate(s) found for the request path '/health'
+2025-11-13 22:49:22.902 -03:00 [DBG] Request matched endpoint 'Health checks'
+2025-11-13 22:49:22.903 -03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-11-13 22:49:22.904 -03:00 [INF] Executing endpoint 'Health checks'
+2025-11-13 22:49:22.905 -03:00 [DBG] Running health checks
+2025-11-13 22:49:22.905 -03:00 [DBG] Health check processing with combined status "Healthy" completed after 0.678ms
+2025-11-13 22:49:22.907 -03:00 [INF] Executed endpoint 'Health checks'
+2025-11-13 22:49:22.908 -03:00 [INF] HTTP GET /health responded 200 in 5.0802 ms
+2025-11-13 22:49:22.910 -03:00 [DBG] Connection id "0HNH33R0MFPLB" completed keep alive response.
+2025-11-13 22:49:22.912 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5201/health - 200 null text/plain 13.1211ms
+2025-11-13 22:51:18.716 -03:00 [DBG] Connection id "0HNH33R0MFPLB" received FIN.
+2025-11-13 22:51:18.719 -03:00 [DBG] Connection id "0HNH33R0MFPLB" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-11-13 22:51:18.720 -03:00 [DBG] Connection id "0HNH33R0MFPLB" disconnecting.
+2025-11-13 22:51:18.721 -03:00 [DBG] Connection id "0HNH33R0MFPLB" stopped.
+2025-11-13 22:54:24.412 -03:00 [DBG] Config reload token fired. Checking for changes...
+2025-11-13 22:54:24.413 -03:00 [DBG] Middleware configuration started with options: {AllowedHosts = *, AllowEmptyHosts = True, IncludeFailureMessage = True}
+2025-11-13 22:54:24.414 -03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-11-13 22:54:24.675 -03:00 [DBG] Middleware configuration started with options: {AllowedHosts = *, AllowEmptyHosts = True, IncludeFailureMessage = True}
+2025-11-13 22:54:24.677 -03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-11-13 22:54:24.678 -03:00 [DBG] Config reload token fired. Checking for changes...
+2025-11-13 22:58:23.309 -03:00 [INF] Application is shutting down...
+2025-11-13 22:58:23.310 -03:00 [DBG] Hosting stopping
+2025-11-13 22:58:23.316 -03:00 [DBG] Hosting stopped

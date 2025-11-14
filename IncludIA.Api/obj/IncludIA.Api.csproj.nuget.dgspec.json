@@ -139,6 +139,9 @@
             "projectReferences": {
               "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Domain\\IncludIA.Domain.csproj": {
                 "projectPath": "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Domain\\IncludIA.Domain.csproj"
+              },
+              "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Infrastructure\\IncludIA.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Infrastructure\\IncludIA.Infrastructure.csproj"
               }
             }
           }
@@ -158,6 +161,12 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -287,13 +296,23 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
             "Microsoft.Extensions.Configuration.Abstractions": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[9.0.0, )"
             },
             "MongoDB.Driver": {
               "target": "Package",
               "version": "[3.5.0, )"
+            },
+            "Oracle.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.23.26000, )"
             }
           },
           "imports": [
