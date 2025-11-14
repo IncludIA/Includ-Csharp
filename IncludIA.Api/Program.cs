@@ -32,6 +32,8 @@ builder.Services.AddSingleton<MongoDbContext>();
 builder.Services.AddScoped<InclusaoService>();
 builder.Services.AddScoped<IVagaRepository, VagaRepository>();
 builder.Services.AddScoped<VagaService>();
+builder.Services.AddScoped<ICandidatoRepository, CandidatoRepository>();
+builder.Services.AddScoped<ICandidaturaRepository, CandidaturaRepository>();
 
 builder.Services.AddDbContext<OracleDbContext>(options =>
     options.UseOracle(builder.Configuration.GetConnectionString("OracleDb"))
