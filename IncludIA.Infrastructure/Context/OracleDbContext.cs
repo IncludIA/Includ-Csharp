@@ -1,14 +1,16 @@
-﻿using IncludIA.Domain.Entities; // <--- NOVO
+﻿using IncludIA.Domain.Entities; 
 using Microsoft.EntityFrameworkCore;
 
 namespace IncludIA.Infrastructure.Context
 {
     public class OracleDbContext : DbContext
     {
+        public OracleDbContext() {} 
+        
         public OracleDbContext(DbContextOptions<OracleDbContext> options) : base(options) { }
 
-        public DbSet<Candidato> Candidatos { get; set; }
-        public DbSet<Candidatura> Candidaturas { get; set; }
+        public virtual DbSet<Candidato> Candidatos { get; set; }
+        public virtual DbSet<Candidatura> Candidaturas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
