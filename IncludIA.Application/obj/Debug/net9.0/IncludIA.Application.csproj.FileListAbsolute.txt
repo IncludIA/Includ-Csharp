@@ -13,3 +13,4 @@ C:\Users\admin\Desktop\Fiap\IncludIA-Csharp\IncludIA.Application\obj\Debug\net9.
 C:\Users\admin\Desktop\Fiap\IncludIA-Csharp\IncludIA.Application\obj\Debug\net9.0\refint\IncludIA.Application.dll
 C:\Users\admin\Desktop\Fiap\IncludIA-Csharp\IncludIA.Application\obj\Debug\net9.0\IncludIA.Application.pdb
 C:\Users\admin\Desktop\Fiap\IncludIA-Csharp\IncludIA.Application\obj\Debug\net9.0\ref\IncludIA.Application.dll
+C:\Users\admin\Desktop\Fiap\IncludIA-Csharp\IncludIA.Application\obj\Debug\net9.0\IncludIA.Application.sourcelink.json
