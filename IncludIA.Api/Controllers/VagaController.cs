@@ -22,7 +22,6 @@ namespace IncludIA.Api.Controllers
         {
             var vagas = await _service.GetAllAsync(page, size);
             
-            // HATEOAS (Requisito GS)
             var resultado = vagas.Select(v => new 
             {
                 Data = v,

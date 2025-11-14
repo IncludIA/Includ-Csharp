@@ -10,3 +10,4 @@ C:\Users\admin\Desktop\Fiap\IncludIA-Csharp\IncludIA.Domain\obj\Debug\net9.0\Inc
 C:\Users\admin\Desktop\Fiap\IncludIA-Csharp\IncludIA.Domain\obj\Debug\net9.0\refint\IncludIA.Domain.dll
 C:\Users\admin\Desktop\Fiap\IncludIA-Csharp\IncludIA.Domain\obj\Debug\net9.0\IncludIA.Domain.pdb
 C:\Users\admin\Desktop\Fiap\IncludIA-Csharp\IncludIA.Domain\obj\Debug\net9.0\ref\IncludIA.Domain.dll
+C:\Users\admin\Desktop\Fiap\IncludIA-Csharp\IncludIA.Domain\obj\Debug\net9.0\IncludIA.Domain.sourcelink.json

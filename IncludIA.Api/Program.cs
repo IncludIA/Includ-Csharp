@@ -1,8 +1,8 @@
+using Asp.Versioning;
 using IncludIA.Application.Services;
 using IncludIA.Domain.Interfaces;
 using IncludIA.Infrastructure.Context;
 using IncludIA.Infrastructure.Repositories;
-using Asp.Versioning;
 using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddHealthChecks();
 
 builder.Services.AddSingleton<MongoDbContext>();
 builder.Services.AddScoped<IVagaRepository, VagaRepository>();
@@ -22,7 +23,7 @@ builder.Services.AddApiVersioning(options =>
         options.ReportApiVersions = true;
         options.ApiVersionReader = new UrlSegmentApiVersionReader();
     })
-    .AddMvc() 
+    .AddMvc()
     .AddApiExplorer(options =>
     {
         options.GroupNameFormat = "'v'VVV";
@@ -39,6 +40,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseAuthorization();
+
 app.MapControllers();
+app.MapHealthChecks("/health");
 
 app.Run();

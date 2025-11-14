@@ -49,3 +49,4 @@ C:\Users\admin\Desktop\Fiap\IncludIA-Csharp\IncludIA.Api\bin\Debug\net9.0\Asp.Ve
 C:\Users\admin\Desktop\Fiap\IncludIA-Csharp\IncludIA.Api\bin\Debug\net9.0\Asp.Versioning.Http.dll
 C:\Users\admin\Desktop\Fiap\IncludIA-Csharp\IncludIA.Api\bin\Debug\net9.0\Asp.Versioning.Mvc.dll
 C:\Users\admin\Desktop\Fiap\IncludIA-Csharp\IncludIA.Api\bin\Debug\net9.0\Asp.Versioning.Mvc.ApiExplorer.dll
+C:\Users\admin\Desktop\Fiap\IncludIA-Csharp\IncludIA.Api\obj\Debug\net9.0\IncludIA.Api.sourcelink.json
