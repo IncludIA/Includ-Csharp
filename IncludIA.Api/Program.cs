@@ -3,14 +3,29 @@ using IncludIA.Application.Services;
 using IncludIA.Domain.Interfaces;
 using IncludIA.Infrastructure.Context;
 using IncludIA.Infrastructure.Repositories;
-using Microsoft.AspNetCore.Mvc;
+using OpenTelemetry.Trace;
+using Serilog;
+
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Debug()
+    .WriteTo.Console()
+    .WriteTo.File("logs/includia_log.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Host.UseSerilog();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddHealthChecks();
+builder.Services.AddHealthChecks(); 
+
+builder.Services.AddOpenTelemetry()
+    .WithTracing(tracerProviderBuilder =>
+        tracerProviderBuilder
+            .AddAspNetCoreInstrumentation()
+            .AddConsoleExporter());
 
 builder.Services.AddSingleton<MongoDbContext>();
 builder.Services.AddScoped<IVagaRepository, VagaRepository>();
@@ -23,7 +38,7 @@ builder.Services.AddApiVersioning(options =>
         options.ReportApiVersions = true;
         options.ApiVersionReader = new UrlSegmentApiVersionReader();
     })
-    .AddMvc()
+    .AddMvc() 
     .AddApiExplorer(options =>
     {
         options.GroupNameFormat = "'v'VVV";
@@ -31,6 +46,8 @@ builder.Services.AddApiVersioning(options =>
     });
 
 var app = builder.Build();
+
+app.UseSerilogRequestLogging();
 
 if (app.Environment.IsDevelopment())
 {

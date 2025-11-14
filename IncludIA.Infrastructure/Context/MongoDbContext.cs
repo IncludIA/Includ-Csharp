@@ -9,7 +9,6 @@ namespace IncludIA.Infrastructure.Context
 
         public MongoDbContext(IConfiguration configuration)
         {
-            // Pega a string de conexão do appsettings.json
             var connectionString = configuration.GetConnectionString("MongoDb");
             var client = new MongoClient(connectionString);
             _database = client.GetDatabase("IncludIADb");

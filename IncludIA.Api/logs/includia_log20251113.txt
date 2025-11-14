@@ -1,0 +1,21 @@
+2025-11-13 22:23:38.706 -03:00 [DBG] Registered model binder providers, in the following order: ["Asp.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-11-13 22:23:38.795 -03:00 [DBG] Hosting starting
+2025-11-13 22:23:38.849 -03:00 [DBG] Middleware configuration started with options: {AllowedHosts = *, AllowEmptyHosts = True, IncludeFailureMessage = True}
+2025-11-13 22:23:38.852 -03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-11-13 22:23:38.866 -03:00 [INF] Now listening on: http://localhost:5201
+2025-11-13 22:23:38.868 -03:00 [DBG] Loaded hosting startup assembly IncludIA.Api
+2025-11-13 22:23:38.869 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-13 22:23:38.870 -03:00 [INF] Hosting environment: Development
+2025-11-13 22:23:38.871 -03:00 [INF] Content root path: C:\Users\admin\Desktop\Fiap\IncludIA-Csharp\IncludIA.Api
+2025-11-13 22:23:38.872 -03:00 [DBG] Hosting started
+2025-11-13 22:23:48.276 -03:00 [DBG] Connection id "0HNH33HR3K6D6" accepted.
+2025-11-13 22:23:48.278 -03:00 [DBG] Connection id "0HNH33HR3K6D6" started.
+2025-11-13 22:23:48.344 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5201/ - null null
+2025-11-13 22:23:48.373 -03:00 [DBG] No candidates found for the request path '/'
+2025-11-13 22:23:48.376 -03:00 [DBG] Request did not match any endpoints
+2025-11-13 22:23:48.389 -03:00 [DBG] The request path  does not match the path filter
+2025-11-13 22:23:48.390 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-11-13 22:23:48.393 -03:00 [INF] HTTP GET / responded 404 in 11.6959 ms
+2025-11-13 22:23:48.404 -03:00 [DBG] Connection id "0HNH33HR3K6D6" completed keep alive response.
+2025-11-13 22:23:48.406 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5201/ - 404 0 null 63.0915ms
+2025-11-13 22:23:48.414 -03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5201/, Response status code: 404
