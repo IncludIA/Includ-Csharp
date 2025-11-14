@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IncludIA.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+01df0c125c0719e5fa05d3208f7764cc75cb3ff4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cbd26315d1f5997c92e1dddf87352725e1068846")]
 [assembly: System.Reflection.AssemblyProductAttribute("IncludIA.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IncludIA.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
