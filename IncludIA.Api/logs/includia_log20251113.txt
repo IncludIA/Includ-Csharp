@@ -65,3 +65,7 @@ System.OperationCanceledException: The operation was canceled.
 2025-11-13 22:23:52.517 -03:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 190.3318 ms
 2025-11-13 22:23:52.520 -03:00 [DBG] Connection id "0HNH33HR3K6D8" completed keep alive response.
 2025-11-13 22:23:52.521 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5201/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 199.7492ms
+2025-11-13 22:25:47.598 -03:00 [DBG] Connection id "0HNH33HR3K6D8" received FIN.
+2025-11-13 22:25:47.599 -03:00 [DBG] Connection id "0HNH33HR3K6D8" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-11-13 22:25:47.600 -03:00 [DBG] Connection id "0HNH33HR3K6D8" disconnecting.
+2025-11-13 22:25:47.601 -03:00 [DBG] Connection id "0HNH33HR3K6D8" stopped.
