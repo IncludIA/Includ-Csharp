@@ -27,5 +27,17 @@ namespace IncludIA.Infrastructure.Repositories
 
         public async Task CreateAsync(Candidatura candidatura) =>
             await _collection.InsertOneAsync(candidatura);
+
+        public async Task<bool> UpdateAsync(Candidatura candidatura)
+        {
+            var result = await _collection.ReplaceOneAsync(x => x.Id == candidatura.Id, candidatura);
+            return result.IsAcknowledged && result.ModifiedCount > 0;
+        }
+
+        public async Task<bool> DeleteAsync(string id)
+        {
+            var result = await _collection.DeleteOneAsync(x => x.Id == id);
+            return result.IsAcknowledged && result.DeletedCount > 0;
+        }
     }
 }

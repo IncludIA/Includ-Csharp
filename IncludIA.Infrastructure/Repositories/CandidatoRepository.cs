@@ -11,7 +11,7 @@ namespace IncludIA.Infrastructure.Repositories
 
         public CandidatoRepository(MongoDbContext context)
         {
-            _collection = context.GetCollection<Candidato>("Candidatos"); 
+            _collection = context.GetCollection<Candidato>("Candidatos");
         }
 
         public async Task<IEnumerable<Candidato>> GetAllAsync(int page, int pageSize)
@@ -27,5 +27,17 @@ namespace IncludIA.Infrastructure.Repositories
 
         public async Task CreateAsync(Candidato candidato) =>
             await _collection.InsertOneAsync(candidato);
+
+        public async Task<bool> UpdateAsync(Candidato candidato)
+        {
+            var result = await _collection.ReplaceOneAsync(x => x.Id == candidato.Id, candidato);
+            return result.IsAcknowledged && result.ModifiedCount > 0;
+        }
+
+        public async Task<bool> DeleteAsync(string id)
+        {
+            var result = await _collection.DeleteOneAsync(x => x.Id == id);
+            return result.IsAcknowledged && result.DeletedCount > 0;
+        }
     }
 }

@@ -38,5 +38,27 @@ namespace IncludIA.Api.Controllers
             if (candidatura == null) return NotFound();
             return Ok(candidatura);
         }
+        
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(string id, [FromBody] Candidatura candidaturaIn)
+        {
+            var result = await _service.UpdateAsync(id, candidaturaIn);
+            if (!result)
+            {
+                return NotFound();
+            }
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(string id)
+        {
+            var result = await _service.DeleteAsync(id);
+            if (!result)
+            {
+                return NotFound();
+            }
+            return NoContent();
+        }
     }
 }
