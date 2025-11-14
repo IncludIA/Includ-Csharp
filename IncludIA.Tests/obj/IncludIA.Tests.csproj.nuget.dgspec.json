@@ -279,6 +279,10 @@
               "target": "Package",
               "version": "[4.20.72, )"
             },
+            "Moq.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.0.5, )"
+            },
             "coverlet.collector": {
               "target": "Package",
               "version": "[6.0.2, )"
