@@ -1,4 +1,5 @@
 using Asp.Versioning;
+using IncludIA.Application.Service;
 using IncludIA.Application.Services;
 using IncludIA.Domain.Interfaces;
 using IncludIA.Infrastructure.Context;
@@ -28,6 +29,7 @@ builder.Services.AddOpenTelemetry()
             .AddConsoleExporter());
 
 builder.Services.AddSingleton<MongoDbContext>();
+builder.Services.AddScoped<InclusaoService>();
 builder.Services.AddScoped<IVagaRepository, VagaRepository>();
 builder.Services.AddScoped<VagaService>();
 
