@@ -22,68 +22,794 @@ namespace IncludIA.Infrastructure.Migrations
 
             OracleModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("IncludIA.Domain.Entities.Candidato", b =>
+            modelBuilder.Entity("CandidateSkill", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("NVARCHAR2(450)")
-                        .HasColumnName("ID_CANDIDATO");
+                    b.Property<Guid>("CandidatesId")
+                        .HasColumnType("RAW(16)");
+
+                    b.Property<Guid>("SkillsId")
+                        .HasColumnType("RAW(16)");
+
+                    b.HasKey("CandidatesId", "SkillsId");
+
+                    b.HasIndex("SkillsId");
+
+                    b.ToTable("candidate_skills", (string)null);
+                });
+
+            modelBuilder.Entity("IncludIA.Domain.Entities.Candidate", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("RAW(16)");
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("NVARCHAR2(2000)")
-                        .HasColumnName("EMAIL");
+                        .HasColumnType("NVARCHAR2(450)");
+
+                    b.Property<string>("FotoPerfilUrl")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR2(2000)");
+
+                    b.Property<bool>("IsAtive")
+                        .HasColumnType("BOOLEAN");
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasColumnType("NVARCHAR2(2000)")
-                        .HasColumnName("NOME");
+                        .HasColumnType("NVARCHAR2(2000)");
+
+                    b.Property<string>("ResumoInclusivoIA")
+                        .IsRequired()
+                        .HasMaxLength(2000)
+                        .HasColumnType("NVARCHAR2(2000)");
+
+                    b.Property<string>("ResumoPerfil")
+                        .IsRequired()
+                        .HasMaxLength(2000)
+                        .HasColumnType("NVARCHAR2(2000)");
+
+                    b.Property<string>("SenhaHash")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR2(2000)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("TB_CANDIDATO");
+                    b.HasIndex("Email")
+                        .IsUnique();
+
+                    b.ToTable("candidates");
                 });
 
-            modelBuilder.Entity("IncludIA.Domain.Entities.Candidatura", b =>
+            modelBuilder.Entity("IncludIA.Domain.Entities.CandidateIdioma", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("NVARCHAR2(450)")
-                        .HasColumnName("ID_CANDIDATURA");
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("RAW(16)");
 
-                    b.Property<string>("CandidatoId")
-                        .IsRequired()
-                        .HasColumnType("NVARCHAR2(450)")
-                        .HasColumnName("ID_CANDIDATO");
+                    b.Property<Guid>("CandidateId")
+                        .HasColumnType("RAW(16)");
 
-                    b.Property<DateTime>("DataAplicacao")
-                        .HasColumnType("TIMESTAMP(7)")
-                        .HasColumnName("DT_APLICACAO");
+                    b.Property<Guid>("IdiomaId")
+                        .HasColumnType("RAW(16)");
 
-                    b.Property<string>("VagaMongoId")
-                        .IsRequired()
-                        .HasColumnType("NVARCHAR2(2000)")
-                        .HasColumnName("ID_VAGA_MONGO");
+                    b.Property<int>("NivelProficiencia")
+                        .HasColumnType("NUMBER(10)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CandidatoId");
+                    b.HasIndex("IdiomaId");
 
-                    b.ToTable("TB_CANDIDATURA");
+                    b.HasIndex("CandidateId", "IdiomaId")
+                        .IsUnique();
+
+                    b.ToTable("candidate_idiomas");
                 });
 
-            modelBuilder.Entity("IncludIA.Domain.Entities.Candidatura", b =>
+            modelBuilder.Entity("IncludIA.Domain.Entities.Education", b =>
                 {
-                    b.HasOne("IncludIA.Domain.Entities.Candidato", "Candidato")
-                        .WithMany("Candidaturas")
-                        .HasForeignKey("CandidatoId")
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("RAW(16)");
+
+                    b.Property<string>("AreaEstudo")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR2(2000)");
+
+                    b.Property<Guid>("CandidateId")
+                        .HasColumnType("RAW(16)");
+
+                    b.Property<DateTime?>("DataFim")
+                        .HasColumnType("TIMESTAMP(7)");
+
+                    b.Property<DateTime>("DataInicio")
+                        .HasColumnType("TIMESTAMP(7)");
+
+                    b.Property<string>("Descricao")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("NVARCHAR2(1000)");
+
+                    b.Property<int>("Grau")
+                        .HasColumnType("NUMBER(10)");
+
+                    b.Property<string>("NomeInstituicao")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR2(2000)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CandidateId");
+
+                    b.ToTable("educations");
+                });
+
+            modelBuilder.Entity("IncludIA.Domain.Entities.Empresa", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("RAW(16)");
+
+                    b.Property<string>("Cnpj")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR2(450)");
+
+                    b.Property<string>("Cultura")
+                        .IsRequired()
+                        .HasMaxLength(4000)
+                        .HasColumnType("NCLOB");
+
+                    b.Property<string>("Descricao")
+                        .IsRequired()
+                        .HasMaxLength(4000)
+                        .HasColumnType("NCLOB");
+
+                    b.Property<string>("FotoCapaUrl")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR2(2000)");
+
+                    b.Property<string>("Localizacao")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR2(2000)");
+
+                    b.Property<string>("NomeFantasia")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR2(2000)");
+
+                    b.Property<string>("NomeOficial")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR2(2000)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Cnpj")
+                        .IsUnique();
+
+                    b.ToTable("empresas");
+                });
+
+            modelBuilder.Entity("IncludIA.Domain.Entities.Experience", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("RAW(16)");
+
+                    b.Property<Guid>("CandidateId")
+                        .HasColumnType("RAW(16)");
+
+                    b.Property<DateTime?>("DataFim")
+                        .HasColumnType("TIMESTAMP(7)");
+
+                    b.Property<DateTime>("DataInicio")
+                        .HasColumnType("TIMESTAMP(7)");
+
+                    b.Property<string>("Descricao")
+                        .IsRequired()
+                        .HasMaxLength(2000)
+                        .HasColumnType("NVARCHAR2(2000)");
+
+                    b.Property<Guid?>("EmpresaId")
+                        .HasColumnType("RAW(16)");
+
+                    b.Property<int>("TipoEmprego")
+                        .HasColumnType("NUMBER(10)");
+
+                    b.Property<string>("TituloCargo")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR2(2000)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CandidateId");
+
+                    b.HasIndex("EmpresaId");
+
+                    b.ToTable("experiences");
+                });
+
+            modelBuilder.Entity("IncludIA.Domain.Entities.Idioma", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("RAW(16)");
+
+                    b.Property<int>("Nome")
+                        .HasColumnType("NUMBER(10)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("idiomas");
+                });
+
+            modelBuilder.Entity("IncludIA.Domain.Entities.JobVaga", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("RAW(16)");
+
+                    b.Property<string>("Beneficios")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR2(2000)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TIMESTAMP(7)");
+
+                    b.Property<string>("DescricaoInclusiva")
+                        .IsRequired()
+                        .HasMaxLength(5000)
+                        .HasColumnType("NCLOB");
+
+                    b.Property<string>("DescricaoOriginal")
+                        .IsRequired()
+                        .HasMaxLength(5000)
+                        .HasColumnType("NCLOB");
+
+                    b.Property<Guid>("EmpresaId")
+                        .HasColumnType("RAW(16)");
+
+                    b.Property<string>("ExperienciaRequerida")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR2(2000)");
+
+                    b.Property<bool>("IsAtiva")
+                        .HasColumnType("BOOLEAN");
+
+                    b.Property<string>("Localizacao")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR2(2000)");
+
+                    b.Property<int>("ModeloTrabalho")
+                        .HasColumnType("NUMBER(10)");
+
+                    b.Property<Guid>("RecruiterId")
+                        .HasColumnType("RAW(16)");
+
+                    b.Property<decimal?>("SalarioMax")
+                        .HasColumnType("DECIMAL(18, 2)");
+
+                    b.Property<decimal?>("SalarioMin")
+                        .HasColumnType("DECIMAL(18, 2)");
+
+                    b.Property<int>("TipoVaga")
+                        .HasColumnType("NUMBER(10)");
+
+                    b.Property<string>("Titulo")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR2(2000)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EmpresaId");
+
+                    b.HasIndex("RecruiterId");
+
+                    b.ToTable("job_vagas");
+                });
+
+            modelBuilder.Entity("IncludIA.Domain.Entities.Match", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("RAW(16)");
+
+                    b.Property<Guid>("CandidateId")
+                        .HasColumnType("RAW(16)");
+
+                    b.Property<bool>("IsLikedByCandidate")
+                        .HasColumnType("BOOLEAN");
+
+                    b.Property<bool>("IsLikedByRecruiter")
+                        .HasColumnType("BOOLEAN");
+
+                    b.Property<Guid>("JobVagaId")
+                        .HasColumnType("RAW(16)");
+
+                    b.Property<decimal>("MatchScore")
+                        .HasColumnType("decimal(5, 2)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("NUMBER(10)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("JobVagaId");
+
+                    b.HasIndex("CandidateId", "JobVagaId")
+                        .IsUnique();
+
+                    b.ToTable("matches");
+                });
+
+            modelBuilder.Entity("IncludIA.Domain.Entities.Notification", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("RAW(16)");
+
+                    b.Property<Guid?>("CandidateId")
+                        .HasColumnType("RAW(16)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TIMESTAMP(7)");
+
+                    b.Property<bool>("IsRead")
+                        .HasColumnType("BOOLEAN");
+
+                    b.Property<string>("Mensagem")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR2(2000)");
+
+                    b.Property<Guid?>("RecruiterId")
+                        .HasColumnType("RAW(16)");
+
+                    b.Property<int>("Tipo")
+                        .HasColumnType("NUMBER(10)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CandidateId");
+
+                    b.HasIndex("RecruiterId");
+
+                    b.ToTable("notifications");
+                });
+
+            modelBuilder.Entity("IncludIA.Domain.Entities.ProfileView", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("RAW(16)");
+
+                    b.Property<Guid>("CandidateId")
+                        .HasColumnType("RAW(16)");
+
+                    b.Property<Guid>("RecruiterId")
+                        .HasColumnType("RAW(16)");
+
+                    b.Property<DateTime>("ViewedAt")
+                        .HasColumnType("TIMESTAMP(7)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CandidateId");
+
+                    b.HasIndex("RecruiterId");
+
+                    b.ToTable("profile_views");
+                });
+
+            modelBuilder.Entity("IncludIA.Domain.Entities.Recruiter", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("RAW(16)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR2(450)");
+
+                    b.Property<Guid>("EmpresaId")
+                        .HasColumnType("RAW(16)");
+
+                    b.Property<string>("FotoPerfilUrl")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR2(2000)");
+
+                    b.Property<bool>("IsAtive")
+                        .HasColumnType("BOOLEAN");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR2(2000)");
+
+                    b.Property<string>("SenhaHash")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR2(2000)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Email")
+                        .IsUnique();
+
+                    b.HasIndex("EmpresaId");
+
+                    b.ToTable("recruiters");
+                });
+
+            modelBuilder.Entity("IncludIA.Domain.Entities.SavedCandidate", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("RAW(16)");
+
+                    b.Property<Guid>("CandidateId")
+                        .HasColumnType("RAW(16)");
+
+                    b.Property<Guid>("RecruiterId")
+                        .HasColumnType("RAW(16)");
+
+                    b.Property<DateTime>("SavedAt")
+                        .HasColumnType("TIMESTAMP(7)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CandidateId");
+
+                    b.HasIndex("RecruiterId", "CandidateId")
+                        .IsUnique();
+
+                    b.ToTable("saved_candidates");
+                });
+
+            modelBuilder.Entity("IncludIA.Domain.Entities.SavedJob", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("RAW(16)");
+
+                    b.Property<Guid>("CandidateId")
+                        .HasColumnType("RAW(16)");
+
+                    b.Property<Guid>("JobVagaId")
+                        .HasColumnType("RAW(16)");
+
+                    b.Property<DateTime>("SavedAt")
+                        .HasColumnType("TIMESTAMP(7)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("JobVagaId");
+
+                    b.HasIndex("CandidateId", "JobVagaId")
+                        .IsUnique();
+
+                    b.ToTable("saved_jobs");
+                });
+
+            modelBuilder.Entity("IncludIA.Domain.Entities.Skill", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("RAW(16)");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR2(450)");
+
+                    b.Property<int>("TipoSkill")
+                        .HasColumnType("NUMBER(10)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Nome")
+                        .IsUnique();
+
+                    b.ToTable("skills");
+                });
+
+            modelBuilder.Entity("IncludIA.Domain.Entities.Voluntariado", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("RAW(16)");
+
+                    b.Property<Guid>("CandidateId")
+                        .HasColumnType("RAW(16)");
+
+                    b.Property<DateTime?>("DataFim")
+                        .HasColumnType("TIMESTAMP(7)");
+
+                    b.Property<DateTime>("DataInicio")
+                        .HasColumnType("TIMESTAMP(7)");
+
+                    b.Property<string>("Descricao")
+                        .IsRequired()
+                        .HasMaxLength(2000)
+                        .HasColumnType("NVARCHAR2(2000)");
+
+                    b.Property<string>("Funcao")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR2(2000)");
+
+                    b.Property<string>("Organizacao")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR2(2000)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CandidateId");
+
+                    b.ToTable("voluntariados");
+                });
+
+            modelBuilder.Entity("JobVagaSkill", b =>
+                {
+                    b.Property<Guid>("SkillsDesejadasId")
+                        .HasColumnType("RAW(16)");
+
+                    b.Property<Guid>("VagasId")
+                        .HasColumnType("RAW(16)");
+
+                    b.HasKey("SkillsDesejadasId", "VagasId");
+
+                    b.HasIndex("VagasId");
+
+                    b.ToTable("vaga_skills", (string)null);
+                });
+
+            modelBuilder.Entity("CandidateSkill", b =>
+                {
+                    b.HasOne("IncludIA.Domain.Entities.Candidate", null)
+                        .WithMany()
+                        .HasForeignKey("CandidatesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Candidato");
+                    b.HasOne("IncludIA.Domain.Entities.Skill", null)
+                        .WithMany()
+                        .HasForeignKey("SkillsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
-            modelBuilder.Entity("IncludIA.Domain.Entities.Candidato", b =>
+            modelBuilder.Entity("IncludIA.Domain.Entities.CandidateIdioma", b =>
                 {
-                    b.Navigation("Candidaturas");
+                    b.HasOne("IncludIA.Domain.Entities.Candidate", "Candidate")
+                        .WithMany("Idiomas")
+                        .HasForeignKey("CandidateId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("IncludIA.Domain.Entities.Idioma", "Idioma")
+                        .WithMany("CandidateIdiomas")
+                        .HasForeignKey("IdiomaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Candidate");
+
+                    b.Navigation("Idioma");
+                });
+
+            modelBuilder.Entity("IncludIA.Domain.Entities.Education", b =>
+                {
+                    b.HasOne("IncludIA.Domain.Entities.Candidate", "Candidate")
+                        .WithMany("Formacoes")
+                        .HasForeignKey("CandidateId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Candidate");
+                });
+
+            modelBuilder.Entity("IncludIA.Domain.Entities.Experience", b =>
+                {
+                    b.HasOne("IncludIA.Domain.Entities.Candidate", "Candidate")
+                        .WithMany("Experiencias")
+                        .HasForeignKey("CandidateId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("IncludIA.Domain.Entities.Empresa", "Empresa")
+                        .WithMany()
+                        .HasForeignKey("EmpresaId");
+
+                    b.Navigation("Candidate");
+
+                    b.Navigation("Empresa");
+                });
+
+            modelBuilder.Entity("IncludIA.Domain.Entities.JobVaga", b =>
+                {
+                    b.HasOne("IncludIA.Domain.Entities.Empresa", "Empresa")
+                        .WithMany("Vagas")
+                        .HasForeignKey("EmpresaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("IncludIA.Domain.Entities.Recruiter", "Recruiter")
+                        .WithMany("VagasPostadas")
+                        .HasForeignKey("RecruiterId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Empresa");
+
+                    b.Navigation("Recruiter");
+                });
+
+            modelBuilder.Entity("IncludIA.Domain.Entities.Match", b =>
+                {
+                    b.HasOne("IncludIA.Domain.Entities.Candidate", "Candidate")
+                        .WithMany("Matches")
+                        .HasForeignKey("CandidateId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("IncludIA.Domain.Entities.JobVaga", "Vaga")
+                        .WithMany("Matches")
+                        .HasForeignKey("JobVagaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Candidate");
+
+                    b.Navigation("Vaga");
+                });
+
+            modelBuilder.Entity("IncludIA.Domain.Entities.Notification", b =>
+                {
+                    b.HasOne("IncludIA.Domain.Entities.Candidate", "Candidate")
+                        .WithMany("Notificacoes")
+                        .HasForeignKey("CandidateId");
+
+                    b.HasOne("IncludIA.Domain.Entities.Recruiter", "Recruiter")
+                        .WithMany("Notificacoes")
+                        .HasForeignKey("RecruiterId");
+
+                    b.Navigation("Candidate");
+
+                    b.Navigation("Recruiter");
+                });
+
+            modelBuilder.Entity("IncludIA.Domain.Entities.ProfileView", b =>
+                {
+                    b.HasOne("IncludIA.Domain.Entities.Candidate", "Candidate")
+                        .WithMany("ViewsNoPerfil")
+                        .HasForeignKey("CandidateId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("IncludIA.Domain.Entities.Recruiter", "Recruiter")
+                        .WithMany("ViewsEmCandidatos")
+                        .HasForeignKey("RecruiterId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Candidate");
+
+                    b.Navigation("Recruiter");
+                });
+
+            modelBuilder.Entity("IncludIA.Domain.Entities.Recruiter", b =>
+                {
+                    b.HasOne("IncludIA.Domain.Entities.Empresa", "Empresa")
+                        .WithMany("Recruiters")
+                        .HasForeignKey("EmpresaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Empresa");
+                });
+
+            modelBuilder.Entity("IncludIA.Domain.Entities.SavedCandidate", b =>
+                {
+                    b.HasOne("IncludIA.Domain.Entities.Candidate", "Candidate")
+                        .WithMany()
+                        .HasForeignKey("CandidateId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("IncludIA.Domain.Entities.Recruiter", "Recruiter")
+                        .WithMany("CandidatosSalvos")
+                        .HasForeignKey("RecruiterId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Candidate");
+
+                    b.Navigation("Recruiter");
+                });
+
+            modelBuilder.Entity("IncludIA.Domain.Entities.SavedJob", b =>
+                {
+                    b.HasOne("IncludIA.Domain.Entities.Candidate", "Candidate")
+                        .WithMany("VagasSalvas")
+                        .HasForeignKey("CandidateId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("IncludIA.Domain.Entities.JobVaga", "Vaga")
+                        .WithMany()
+                        .HasForeignKey("JobVagaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Candidate");
+
+                    b.Navigation("Vaga");
+                });
+
+            modelBuilder.Entity("IncludIA.Domain.Entities.Voluntariado", b =>
+                {
+                    b.HasOne("IncludIA.Domain.Entities.Candidate", "Candidate")
+                        .WithMany("Voluntariados")
+                        .HasForeignKey("CandidateId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Candidate");
+                });
+
+            modelBuilder.Entity("JobVagaSkill", b =>
+                {
+                    b.HasOne("IncludIA.Domain.Entities.Skill", null)
+                        .WithMany()
+                        .HasForeignKey("SkillsDesejadasId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("IncludIA.Domain.Entities.JobVaga", null)
+                        .WithMany()
+                        .HasForeignKey("VagasId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("IncludIA.Domain.Entities.Candidate", b =>
+                {
+                    b.Navigation("Experiencias");
+
+                    b.Navigation("Formacoes");
+
+                    b.Navigation("Idiomas");
+
+                    b.Navigation("Matches");
+
+                    b.Navigation("Notificacoes");
+
+                    b.Navigation("VagasSalvas");
+
+                    b.Navigation("ViewsNoPerfil");
+
+                    b.Navigation("Voluntariados");
+                });
+
+            modelBuilder.Entity("IncludIA.Domain.Entities.Empresa", b =>
+                {
+                    b.Navigation("Recruiters");
+
+                    b.Navigation("Vagas");
+                });
+
+            modelBuilder.Entity("IncludIA.Domain.Entities.Idioma", b =>
+                {
+                    b.Navigation("CandidateIdiomas");
+                });
+
+            modelBuilder.Entity("IncludIA.Domain.Entities.JobVaga", b =>
+                {
+                    b.Navigation("Matches");
+                });
+
+            modelBuilder.Entity("IncludIA.Domain.Entities.Recruiter", b =>
+                {
+                    b.Navigation("CandidatosSalvos");
+
+                    b.Navigation("Notificacoes");
+
+                    b.Navigation("VagasPostadas");
+
+                    b.Navigation("ViewsEmCandidatos");
                 });
 #pragma warning restore 612, 618
         }

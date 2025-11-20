@@ -11,3 +11,16 @@ C:\Users\admin\Desktop\Fiap\IncludIA-Csharp\IncludIA.Domain\obj\Debug\net9.0\ref
 C:\Users\admin\Desktop\Fiap\IncludIA-Csharp\IncludIA.Domain\obj\Debug\net9.0\IncludIA.Domain.pdb
 C:\Users\admin\Desktop\Fiap\IncludIA-Csharp\IncludIA.Domain\obj\Debug\net9.0\ref\IncludIA.Domain.dll
 C:\Users\admin\Desktop\Fiap\IncludIA-Csharp\IncludIA.Domain\obj\Debug\net9.0\IncludIA.Domain.sourcelink.json
+C:\Users\admin\Desktop\Fiap\Includ-Csharp\IncludIA.Domain\bin\Debug\net9.0\IncludIA.Domain.deps.json
+C:\Users\admin\Desktop\Fiap\Includ-Csharp\IncludIA.Domain\bin\Debug\net9.0\IncludIA.Domain.dll
+C:\Users\admin\Desktop\Fiap\Includ-Csharp\IncludIA.Domain\bin\Debug\net9.0\IncludIA.Domain.pdb
+C:\Users\admin\Desktop\Fiap\Includ-Csharp\IncludIA.Domain\obj\Debug\net9.0\IncludIA.Domain.csproj.AssemblyReference.cache
+C:\Users\admin\Desktop\Fiap\Includ-Csharp\IncludIA.Domain\obj\Debug\net9.0\IncludIA.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\Desktop\Fiap\Includ-Csharp\IncludIA.Domain\obj\Debug\net9.0\IncludIA.Domain.AssemblyInfoInputs.cache
+C:\Users\admin\Desktop\Fiap\Includ-Csharp\IncludIA.Domain\obj\Debug\net9.0\IncludIA.Domain.AssemblyInfo.cs
+C:\Users\admin\Desktop\Fiap\Includ-Csharp\IncludIA.Domain\obj\Debug\net9.0\IncludIA.Domain.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\Fiap\Includ-Csharp\IncludIA.Domain\obj\Debug\net9.0\IncludIA.Domain.sourcelink.json
+C:\Users\admin\Desktop\Fiap\Includ-Csharp\IncludIA.Domain\obj\Debug\net9.0\IncludIA.Domain.dll
+C:\Users\admin\Desktop\Fiap\Includ-Csharp\IncludIA.Domain\obj\Debug\net9.0\refint\IncludIA.Domain.dll
+C:\Users\admin\Desktop\Fiap\Includ-Csharp\IncludIA.Domain\obj\Debug\net9.0\IncludIA.Domain.pdb
+C:\Users\admin\Desktop\Fiap\Includ-Csharp\IncludIA.Domain\obj\Debug\net9.0\ref\IncludIA.Domain.dll

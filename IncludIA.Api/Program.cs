@@ -32,6 +32,22 @@ builder.Services.AddSingleton<MongoDbContext>();
 builder.Services.AddScoped<InclusaoService>();
 builder.Services.AddScoped<IVagaRepository, VagaRepository>();
 builder.Services.AddScoped<VagaService>();
+builder.Services.AddScoped<ICandidateRepository, CandidateRepository>();
+builder.Services.AddScoped<IEmpresaRepository, EmpresaRepository>();
+builder.Services.AddScoped<IJobVagaRepository, JobVagaRepository>();
+builder.Services.AddScoped<IRecruiterRepository, RecruiterRepository>();
+
+builder.Services.AddScoped<ICandidateIdiomaRepository, CandidateIdiomaRepository>();
+builder.Services.AddScoped<IEducationRepository, EducationRepository>();
+builder.Services.AddScoped<IExperienceRepository, ExperienceRepository>();
+builder.Services.AddScoped<IIdiomaRepository, IdiomaRepository>();
+builder.Services.AddScoped<IMatchRepository, MatchRepository>();
+builder.Services.AddScoped<INotificationRepository, NotificationRepository>();
+builder.Services.AddScoped<IProfileViewRepository, ProfileViewRepository>();
+builder.Services.AddScoped<ISavedCandidateRepository, SavedCandidateRepository>();
+builder.Services.AddScoped<ISavedJobRepository, SavedJobRepository>();
+builder.Services.AddScoped<ISkillRepository, SkillRepository>();
+builder.Services.AddScoped<IVoluntariadoRepository, VoluntariadoRepository>();
 
 builder.Services.AddDbContext<OracleDbContext>(options =>
     options.UseOracle(builder.Configuration.GetConnectionString("OracleDb"))
