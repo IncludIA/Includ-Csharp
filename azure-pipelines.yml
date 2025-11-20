@@ -12,6 +12,8 @@ variables:
   webAppName: 'app-includia-iot-2771'
   imageName: 'includia-api'
   tag: '$(Build.BuildId)'
+  buildContext: '.' 
+  dockerfilePath: 'Dockerfile' 
 
 stages:
 - stage: Build
