@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Api\\IncludIA.Api.csproj": {}
+    "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Api\\IncludIA.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Api\\IncludIA.Api.csproj": {
+    "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Api\\IncludIA.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Api\\IncludIA.Api.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Api\\IncludIA.Api.csproj",
         "projectName": "IncludIA.Api",
-        "projectPath": "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Api\\IncludIA.Api.csproj",
+        "projectPath": "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Api\\IncludIA.Api.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Api\\obj\\",
+        "outputPath": "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,11 +26,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Application\\IncludIA.Application.csproj": {
-                "projectPath": "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Application\\IncludIA.Application.csproj"
+              "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Application\\IncludIA.Application.csproj": {
+                "projectPath": "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Application\\IncludIA.Application.csproj"
               },
-              "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Infrastructure\\IncludIA.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Infrastructure\\IncludIA.Infrastructure.csproj"
+              "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Infrastructure\\IncludIA.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Infrastructure\\IncludIA.Infrastructure.csproj"
               }
             }
           }
@@ -58,6 +58,10 @@
             "Asp.Versioning.Mvc.ApiExplorer": {
               "target": "Package",
               "version": "[8.1.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[9.0.0, )"
             },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
@@ -121,14 +125,14 @@
         }
       }
     },
-    "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Application\\IncludIA.Application.csproj": {
+    "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Application\\IncludIA.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Application\\IncludIA.Application.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Application\\IncludIA.Application.csproj",
         "projectName": "IncludIA.Application",
-        "projectPath": "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Application\\IncludIA.Application.csproj",
+        "projectPath": "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Application\\IncludIA.Application.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Application\\obj\\",
+        "outputPath": "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -143,11 +147,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Domain\\IncludIA.Domain.csproj": {
-                "projectPath": "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Domain\\IncludIA.Domain.csproj"
+              "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Domain\\IncludIA.Domain.csproj": {
+                "projectPath": "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Domain\\IncludIA.Domain.csproj"
               },
-              "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Infrastructure\\IncludIA.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Infrastructure\\IncludIA.Infrastructure.csproj"
+              "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Infrastructure\\IncludIA.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Infrastructure\\IncludIA.Infrastructure.csproj"
               }
             }
           }
@@ -193,14 +197,14 @@
         }
       }
     },
-    "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Domain\\IncludIA.Domain.csproj": {
+    "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Domain\\IncludIA.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Domain\\IncludIA.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Domain\\IncludIA.Domain.csproj",
         "projectName": "IncludIA.Domain",
-        "projectPath": "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Domain\\IncludIA.Domain.csproj",
+        "projectPath": "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Domain\\IncludIA.Domain.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Domain\\obj\\",
+        "outputPath": "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -258,14 +262,14 @@
         }
       }
     },
-    "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Infrastructure\\IncludIA.Infrastructure.csproj": {
+    "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Infrastructure\\IncludIA.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Infrastructure\\IncludIA.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Infrastructure\\IncludIA.Infrastructure.csproj",
         "projectName": "IncludIA.Infrastructure",
-        "projectPath": "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Infrastructure\\IncludIA.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Infrastructure\\IncludIA.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -280,8 +284,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Domain\\IncludIA.Domain.csproj": {
-                "projectPath": "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Domain\\IncludIA.Domain.csproj"
+              "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Domain\\IncludIA.Domain.csproj": {
+                "projectPath": "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Domain\\IncludIA.Domain.csproj"
               }
             }
           }

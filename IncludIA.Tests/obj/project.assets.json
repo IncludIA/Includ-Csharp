@@ -2741,11 +2741,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Tests\\IncludIA.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Tests\\IncludIA.Tests.csproj",
       "projectName": "IncludIA.Tests",
-      "projectPath": "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Tests\\IncludIA.Tests.csproj",
+      "projectPath": "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Tests\\IncludIA.Tests.csproj",
       "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Tests\\obj\\",
+      "outputPath": "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -2760,11 +2760,11 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Application\\IncludIA.Application.csproj": {
-              "projectPath": "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Application\\IncludIA.Application.csproj"
+            "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Application\\IncludIA.Application.csproj": {
+              "projectPath": "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Application\\IncludIA.Application.csproj"
             },
-            "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Domain\\IncludIA.Domain.csproj": {
-              "projectPath": "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Domain\\IncludIA.Domain.csproj"
+            "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Domain\\IncludIA.Domain.csproj": {
+              "projectPath": "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Domain\\IncludIA.Domain.csproj"
             }
           }
         }

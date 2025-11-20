@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "w7tvemXvw/0=",
+  "dgSpecHash": "kTcdcbl1Rwk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Infrastructure\\IncludIA.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Infrastructure\\IncludIA.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.0\\microsoft.entityframeworkcore.9.0.0.nupkg.sha512",

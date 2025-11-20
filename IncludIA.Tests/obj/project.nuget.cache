@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Go5/wB1x9UU=",
+  "dgSpecHash": "4KAs7a4x3kQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Tests\\IncludIA.Tests.csproj",
+  "projectFilePath": "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Tests\\IncludIA.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\coverlet.collector\\6.0.2\\coverlet.collector.6.0.2.nupkg.sha512",

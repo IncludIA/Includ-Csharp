@@ -16,7 +16,5 @@ namespace IncludIA.Infrastructure.Context
         }
 
         public IMongoCollection<T> GetCollection<T>(string name) => _database.GetCollection<T>(name);
-        public IMongoCollection<Candidato> Candidatos => _database.GetCollection<Candidato>("Candidatos");
-        public IMongoCollection<Candidatura> Candidaturas => _database.GetCollection<Candidatura>("Candidaturas");
     }
 }

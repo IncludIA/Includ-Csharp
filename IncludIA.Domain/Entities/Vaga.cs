@@ -1,8 +1,7 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace IncludIA.Domain.Entities
-{
+namespace IncludIA.Domain.Entities;
     public class Vaga
     {
         [BsonId]
@@ -16,4 +15,3 @@ namespace IncludIA.Domain.Entities
         public List<string> SkillsObrigatorias { get; set; } = new();
         public DateTime DataPublicacao { get; set; } = DateTime.UtcNow;
     }
-}

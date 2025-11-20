@@ -130,11 +130,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Domain\\IncludIA.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Domain\\IncludIA.Domain.csproj",
       "projectName": "IncludIA.Domain",
-      "projectPath": "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Domain\\IncludIA.Domain.csproj",
+      "projectPath": "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Domain\\IncludIA.Domain.csproj",
       "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\admin\\Desktop\\Fiap\\IncludIA-Csharp\\IncludIA.Domain\\obj\\",
+      "outputPath": "C:\\Users\\admin\\Desktop\\Fiap\\Includ-Csharp\\IncludIA.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
