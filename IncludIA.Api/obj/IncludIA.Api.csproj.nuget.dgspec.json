@@ -59,6 +59,10 @@
               "target": "Package",
               "version": "[8.1.0, )"
             },
+            "AspNetCore.HealthChecks.Oracle": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[9.0.0, )"
