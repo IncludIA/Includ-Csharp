@@ -2,31 +2,63 @@ trigger:
   - azure-pipelines
 
 pool:
-  vmImage: "ubuntu-latest"
+  vmImage: 'ubuntu-latest'
 
 variables:
-  azureSubscription: "azureSubscription"
-  acrConnection: "acrConnection"
-  acrLoginServer: "acrincludia2771.azurecr.io"
-  webAppName: "app-includia-iot-2771"
-  buildContext: "."
-  dockerfilePath: "Dockerfile"
+  projectRoot: '.' 
+  azureSubscription: 'azureSubscription'
+  acrConnection: 'acrConnection'
+  acrLoginServer: 'acrincludia2771.azurecr.io'
+  webAppName: 'app-includia-iot-2771'
+  imageName: 'includia-api'
+  tag: '$(Build.BuildId)'
 
-steps:
-  - task: Docker@2
-    displayName: "Build & Push IoT"
-    inputs:
-      containerRegistry: "$(acrConnection)"
-      repository: "$(webAppName)"
-      command: "buildAndPush"
-      Dockerfile: "$(dockerfilePath)"
-      buildContext: "$(buildContext)"
-      tags: "latest"
+stages:
+- stage: Build
+  displayName: Build and Test
+  jobs:
+  - job: Build
+    displayName: Build, Test and Push
+    steps:
+    
+    - task: DotNetCoreCLI@2
+      displayName: 'Run Unit Tests'
+      inputs:
+        command: 'test'
+        projects: '$(projectRoot)/**/*.Tests.csproj'
+        arguments: '--configuration Release --logger trx --collect "Code coverage"'
+        publishTestResults: true
 
-  - task: AzureWebAppContainer@1
-    displayName: "Deploy IoT to Azure"
-    inputs:
-      azureSubscription: "$(azureSubscription)"
-      appName: "$(webAppName)"
-      containers: "$(acrLoginServer)/$(webAppName):latest"
-      appSettings: '-GEMINI_API_KEY "$(GOOGLE_API_KEY)"'
+    - task: Docker@2
+      displayName: 'Login to ACR'
+      inputs:
+        command: login
+        containerRegistry: $(acrConnection)
+
+    - task: Docker@2
+      displayName: 'Build and Push Docker Image'
+      inputs:
+        command: buildAndPush
+        repository: $(imageName)
+        dockerfile: '$(projectRoot)/Dockerfile'
+        buildContext: '$(projectRoot)'
+        containerRegistry: $(acrConnection)
+        tags: |
+          $(tag)
+          latest
+
+- stage: Deploy
+  displayName: Deploy to Azure
+  dependsOn: Build
+  condition: succeeded()
+  jobs:
+  - job: Deploy
+    displayName: Deploy to Web App Container
+    steps:
+    - task: AzureWebAppContainer@1
+      displayName: 'Azure Web App Deploy'
+      inputs:
+        azureSubscription: $(azureSubscription)
+        appName: $(webAppName)
+        containers: '$(acrLoginServer)/$(imageName):$(tag)'
+        appSettings: '-ConnectionStrings__OracleDb "$(ORACLE_DB)" -ConnectionStrings__MongoDb "$(MONGO_DB)" -Jwt__Key "$(JWT_KEY)"'
