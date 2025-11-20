@@ -2,5 +2,8 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e3e604fe_002Dfe84_002D4c03_002Db848_002D4eac34dbac5b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="VagaServiceTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::A946E1D0-C0A1-4396-B2A1-A1EDA172A0A4::net9.0::IncludIA.Tests.VagaServiceTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::A946E1D0-C0A1-4396-B2A1-A1EDA172A0A4::net9.0::IncludIA.Tests.CandidateServiceTests.CreateAsync_DeveBloquear_QuandoIaDetectaOdio&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::A946E1D0-C0A1-4396-B2A1-A1EDA172A0A4::net9.0::IncludIA.Tests.CandidateServiceTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::A946E1D0-C0A1-4396-B2A1-A1EDA172A0A4::net9.0::IncludIA.Tests.JobVagaServiceTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

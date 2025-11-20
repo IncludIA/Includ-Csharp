@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace IncludIA.Infrastructure.Repositories
 {
-    public class ICandidatoRepository : ICandidateRepository
+    public class CandidateRepository : ICandidateRepository
     {
         private readonly OracleDbContext _context;
 
-        public ICandidatoRepository(OracleDbContext context)
+        public CandidateRepository(OracleDbContext context)
         {
             _context = context;
         }

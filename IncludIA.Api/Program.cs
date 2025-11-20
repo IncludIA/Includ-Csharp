@@ -42,7 +42,7 @@ builder.Services.AddSingleton<MongoDbContext>();
 
 // 4. Injeção de Dependência - Repositories (Camada de Infraestrutura)
 // Core
-builder.Services.AddScoped<ICandidatoRepository, ICandidatoRepository>();
+builder.Services.AddScoped<ICandidateRepository, CandidateRepository>();
 builder.Services.AddScoped<IRecruiterRepository, RecruiterRepository>();
 builder.Services.AddScoped<IEmpresaRepository, EmpresaRepository>();
 builder.Services.AddScoped<IJobVagaRepository, JobVagaRepository>();

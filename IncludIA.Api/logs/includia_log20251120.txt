@@ -2402,3 +2402,75 @@ System.InvalidOperationException: Unable to resolve service for type 'IncludIA.A
 2025-11-20 16:47:42.419 -03:00 [INF] Application is shutting down...
 2025-11-20 16:47:42.419 -03:00 [DBG] Hosting stopping
 2025-11-20 16:47:42.426 -03:00 [DBG] Hosting stopped
+2025-11-20 16:53:04.284 -03:00 [DBG] Registered model binder providers, in the following order: ["Asp.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-11-20 16:53:04.417 -03:00 [DBG] Hosting starting
+2025-11-20 16:53:04.430 -03:00 [INF] User profile is available. Using 'C:\Users\admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-20 16:53:04.465 -03:00 [DBG] Repository contains no viable default key. Caller should generate a key with immediate activation.
+2025-11-20 16:53:04.466 -03:00 [DBG] Policy resolution states that a new key should be added to the key ring.
+2025-11-20 16:53:04.469 -03:00 [INF] Creating key {ebbe681f-5e09-48c5-ae4d-c642c3d27d12} with creation date 2025-11-20 19:53:04Z, activation date 2025-11-20 19:53:04Z, and expiration date 2026-02-18 19:53:04Z.
+2025-11-20 16:53:04.479 -03:00 [DBG] Descriptor deserializer type for key {ebbe681f-5e09-48c5-ae4d-c642c3d27d12} is 'Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=9.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'.
+2025-11-20 16:53:04.483 -03:00 [DBG] No key escrow sink found. Not writing key {ebbe681f-5e09-48c5-ae4d-c642c3d27d12} to escrow.
+2025-11-20 16:53:04.487 -03:00 [DBG] Encrypting to Windows DPAPI for current user account (MERLIM\admin).
+2025-11-20 16:53:04.493 -03:00 [INF] Writing data to file 'C:\Users\admin\AppData\Local\ASP.NET\DataProtection-Keys\key-ebbe681f-5e09-48c5-ae4d-c642c3d27d12.xml'.
+2025-11-20 16:53:04.495 -03:00 [DBG] Key cache expiration token triggered by 'CreateNewKey' operation.
+2025-11-20 16:53:04.498 -03:00 [DBG] Reading data from file 'C:\Users\admin\AppData\Local\ASP.NET\DataProtection-Keys\key-ebbe681f-5e09-48c5-ae4d-c642c3d27d12.xml'.
+2025-11-20 16:53:04.515 -03:00 [DBG] Found key {ebbe681f-5e09-48c5-ae4d-c642c3d27d12}.
+2025-11-20 16:53:04.519 -03:00 [DBG] Considering key {ebbe681f-5e09-48c5-ae4d-c642c3d27d12} with expiration date 2026-02-18 19:53:04Z as default key.
+2025-11-20 16:53:04.523 -03:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2025-11-20 16:53:04.525 -03:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2025-11-20 16:53:04.527 -03:00 [DBG] Using key {ebbe681f-5e09-48c5-ae4d-c642c3d27d12} as the default key.
+2025-11-20 16:53:04.529 -03:00 [DBG] Key ring with default key {ebbe681f-5e09-48c5-ae4d-c642c3d27d12} was loaded during application startup.
+2025-11-20 16:53:04.558 -03:00 [DBG] Middleware configuration started with options: {AllowedHosts = *, AllowEmptyHosts = True, IncludeFailureMessage = True}
+2025-11-20 16:53:04.560 -03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-11-20 16:53:04.571 -03:00 [INF] Now listening on: http://localhost:5201
+2025-11-20 16:53:04.573 -03:00 [DBG] Loaded hosting startup assembly IncludIA.Api
+2025-11-20 16:53:04.574 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-20 16:53:04.575 -03:00 [INF] Hosting environment: Development
+2025-11-20 16:53:04.577 -03:00 [INF] Content root path: C:\Users\admin\Desktop\Fiap\Includ-Csharp\IncludIA.Api
+2025-11-20 16:53:04.578 -03:00 [DBG] Hosting started
+2025-11-20 16:53:08.966 -03:00 [DBG] Connection id "0HNH8DPMVFIEN" accepted.
+2025-11-20 16:53:08.968 -03:00 [DBG] Connection id "0HNH8DPMVFIEN" started.
+2025-11-20 16:53:08.997 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5201/swagger/index.html - null null
+2025-11-20 16:53:09.030 -03:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2025-11-20 16:53:09.032 -03:00 [DBG] Request did not match any endpoints
+2025-11-20 16:53:09.085 -03:00 [INF] HTTP GET /swagger/index.html responded 200 in 49.6694 ms
+2025-11-20 16:53:09.096 -03:00 [DBG] Connection id "0HNH8DPMVFIEN" completed keep alive response.
+2025-11-20 16:53:09.099 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5201/swagger/index.html - 200 null text/html;charset=utf-8 102.4393ms
+2025-11-20 16:53:09.220 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5201/swagger/v1/swagger.json - null null
+2025-11-20 16:53:09.224 -03:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2025-11-20 16:53:09.225 -03:00 [DBG] Request did not match any endpoints
+2025-11-20 16:53:09.232 -03:00 [DBG] Executing API description provider 'EndpointMetadataApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-11-20 16:53:09.234 -03:00 [DBG] Executing API description provider 'DefaultApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-11-20 16:53:09.241 -03:00 [DBG] Executing API description provider 'VersionedApiDescriptionProvider' from assembly Asp.Versioning.Mvc.ApiExplorer v8.1.0.0.
+2025-11-20 16:53:09.364 -03:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 137.6369 ms
+2025-11-20 16:53:09.367 -03:00 [DBG] Connection id "0HNH8DPMVFIEN" completed keep alive response.
+2025-11-20 16:53:09.368 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5201/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 148.5963ms
+2025-11-20 16:53:14.843 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5201/swagger/v1/swagger.json - null null
+2025-11-20 16:53:14.846 -03:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2025-11-20 16:53:14.847 -03:00 [DBG] Request did not match any endpoints
+2025-11-20 16:53:14.864 -03:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 16.2269 ms
+2025-11-20 16:53:14.867 -03:00 [DBG] Connection id "0HNH8DPMVFIEN" completed keep alive response.
+2025-11-20 16:53:14.868 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5201/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 25.7867ms
+2025-11-20 16:53:14.895 -03:00 [DBG] Connection id "0HNH8DPMVFIEO" accepted.
+2025-11-20 16:53:14.896 -03:00 [DBG] Connection id "0HNH8DPMVFIEO" started.
+2025-11-20 16:53:14.898 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5201/favicon.ico - null null
+2025-11-20 16:53:14.901 -03:00 [DBG] No candidates found for the request path '/favicon.ico'
+2025-11-20 16:53:14.903 -03:00 [DBG] Request did not match any endpoints
+2025-11-20 16:53:14.905 -03:00 [DBG] The request path  does not match the path filter
+2025-11-20 16:53:14.907 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-11-20 16:53:14.952 -03:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-11-20 16:53:14.954 -03:00 [INF] HTTP GET /favicon.ico responded 404 in 50.0880 ms
+2025-11-20 16:53:14.957 -03:00 [DBG] Connection id "0HNH8DPMVFIEO" completed keep alive response.
+2025-11-20 16:53:14.958 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5201/favicon.ico - 404 0 null 60.1162ms
+2025-11-20 16:53:14.963 -03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5201/favicon.ico, Response status code: 404
+2025-11-20 16:55:10.874 -03:00 [DBG] Connection id "0HNH8DPMVFIEN" received FIN.
+2025-11-20 16:55:10.874 -03:00 [DBG] Connection id "0HNH8DPMVFIEO" received FIN.
+2025-11-20 16:55:10.876 -03:00 [DBG] Connection id "0HNH8DPMVFIEN" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-11-20 16:55:10.877 -03:00 [DBG] Connection id "0HNH8DPMVFIEO" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-11-20 16:55:10.878 -03:00 [DBG] Connection id "0HNH8DPMVFIEN" disconnecting.
+2025-11-20 16:55:10.879 -03:00 [DBG] Connection id "0HNH8DPMVFIEO" disconnecting.
+2025-11-20 16:55:10.881 -03:00 [DBG] Connection id "0HNH8DPMVFIEN" stopped.
+2025-11-20 16:55:10.881 -03:00 [DBG] Connection id "0HNH8DPMVFIEO" stopped.
+2025-11-20 16:55:14.839 -03:00 [INF] Application is shutting down...
+2025-11-20 16:55:14.839 -03:00 [DBG] Hosting stopping
+2025-11-20 16:55:14.845 -03:00 [DBG] Hosting stopped
