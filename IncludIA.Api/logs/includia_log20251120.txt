@@ -2263,3 +2263,142 @@ https://docs.oracle.com/error-help/db/ora-00902/
 2025-11-20 16:05:41.983 -03:00 [DBG] 'OracleDbContext' disposed.
 2025-11-20 16:05:41.985 -03:00 [DBG] Disposing connection to database '' on server 'localhost:1521/XEPDB1'.
 2025-11-20 16:05:41.988 -03:00 [DBG] Disposed connection to database '' on server '' (2ms).
+2025-11-20 16:43:36.672 -03:00 [DBG] Registered model binder providers, in the following order: ["Asp.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-11-20 16:43:36.800 -03:00 [DBG] Hosting starting
+2025-11-20 16:43:36.863 -03:00 [DBG] Middleware configuration started with options: {AllowedHosts = *, AllowEmptyHosts = True, IncludeFailureMessage = True}
+2025-11-20 16:43:36.867 -03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-11-20 16:43:36.879 -03:00 [INF] Now listening on: http://localhost:5201
+2025-11-20 16:43:36.881 -03:00 [DBG] Loaded hosting startup assembly IncludIA.Api
+2025-11-20 16:43:36.882 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-20 16:43:36.884 -03:00 [INF] Hosting environment: Development
+2025-11-20 16:43:36.885 -03:00 [INF] Content root path: C:\Users\admin\Desktop\Fiap\Includ-Csharp\IncludIA.Api
+2025-11-20 16:43:36.886 -03:00 [DBG] Hosting started
+2025-11-20 16:43:57.014 -03:00 [DBG] Connection id "0HNH8DKIFL5VU" accepted.
+2025-11-20 16:43:57.016 -03:00 [DBG] Connection id "0HNH8DKIFL5VU" started.
+2025-11-20 16:43:57.108 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5201/ - null null
+2025-11-20 16:43:57.142 -03:00 [DBG] No candidates found for the request path '/'
+2025-11-20 16:43:57.144 -03:00 [DBG] Request did not match any endpoints
+2025-11-20 16:43:57.162 -03:00 [DBG] The request path  does not match the path filter
+2025-11-20 16:43:57.163 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-11-20 16:43:57.167 -03:00 [INF] HTTP GET / responded 404 in 16.7457 ms
+2025-11-20 16:43:57.184 -03:00 [DBG] Connection id "0HNH8DKIFL5VU" completed keep alive response.
+2025-11-20 16:43:57.186 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5201/ - 404 0 null 80.2399ms
+2025-11-20 16:43:57.195 -03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5201/, Response status code: 404
+2025-11-20 16:43:58.930 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5201/ - null null
+2025-11-20 16:43:58.933 -03:00 [DBG] No candidates found for the request path '/'
+2025-11-20 16:43:58.934 -03:00 [DBG] Request did not match any endpoints
+2025-11-20 16:43:58.935 -03:00 [DBG] The request path  does not match the path filter
+2025-11-20 16:43:58.937 -03:00 [INF] HTTP GET / responded 404 in 1.8101 ms
+2025-11-20 16:43:58.939 -03:00 [DBG] Connection id "0HNH8DKIFL5VU" completed keep alive response.
+2025-11-20 16:43:58.940 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5201/ - 404 0 null 10.2757ms
+2025-11-20 16:43:58.944 -03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5201/, Response status code: 404
+2025-11-20 16:44:15.285 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5201/swagger/index.html - null null
+2025-11-20 16:44:15.288 -03:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2025-11-20 16:44:15.289 -03:00 [DBG] Request did not match any endpoints
+2025-11-20 16:44:15.330 -03:00 [INF] HTTP GET /swagger/index.html responded 200 in 39.0408 ms
+2025-11-20 16:44:15.333 -03:00 [DBG] Connection id "0HNH8DKIFL5VU" completed keep alive response.
+2025-11-20 16:44:15.335 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5201/swagger/index.html - 200 null text/html;charset=utf-8 50.1307ms
+2025-11-20 16:44:15.361 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5201/swagger/swagger-ui.css - null null
+2025-11-20 16:44:15.362 -03:00 [DBG] Connection id "0HNH8DKIFL5VU" received FIN.
+2025-11-20 16:44:15.362 -03:00 [DBG] Connection id "0HNH8DKIFL5VV" accepted.
+2025-11-20 16:44:15.366 -03:00 [DBG] No candidates found for the request path '/swagger/swagger-ui.css'
+2025-11-20 16:44:15.368 -03:00 [DBG] Connection id "0HNH8DKIFL5VV" started.
+2025-11-20 16:44:15.368 -03:00 [DBG] Connection id "0HNH8DKIFL5VU" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-11-20 16:44:15.369 -03:00 [DBG] Request did not match any endpoints
+2025-11-20 16:44:15.373 -03:00 [DBG] Connection id "0HNH8DKIFL5VU" disconnecting.
+2025-11-20 16:44:15.380 -03:00 [DBG] The file transmission was cancelled
+System.OperationCanceledException: The operation was canceled.
+   at System.Threading.CancellationToken.ThrowOperationCanceledException()
+   at System.Threading.CancellationToken.ThrowIfCancellationRequested()
+   at Microsoft.AspNetCore.Http.SendFileResponseExtensions.SendFileAsyncCore(HttpResponse response, IFileInfo file, Int64 offset, Nullable`1 count, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.SendFileResponseExtensions.SendFileAsyncCore(HttpResponse response, IFileInfo file, Int64 offset, Nullable`1 count, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileContext.SendAsync()
+2025-11-20 16:44:15.394 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-11-20 16:44:15.396 -03:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 22.8017 ms
+2025-11-20 16:44:15.399 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5201/swagger/swagger-ui.css - 499 152034 text/css 37.3845ms
+2025-11-20 16:44:15.405 -03:00 [DBG] Connection id "0HNH8DKIFL5VU" stopped.
+2025-11-20 16:44:15.517 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5201/swagger/favicon-16x16.png - null null
+2025-11-20 16:44:15.518 -03:00 [DBG] Connection id "0HNH8DKIFL5VV" received FIN.
+2025-11-20 16:44:15.520 -03:00 [DBG] No candidates found for the request path '/swagger/favicon-16x16.png'
+2025-11-20 16:44:15.522 -03:00 [DBG] Connection id "0HNH8DKIFL5VV" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-11-20 16:44:15.523 -03:00 [DBG] Request did not match any endpoints
+2025-11-20 16:44:15.525 -03:00 [DBG] Connection id "0HNH8DKIFL5VV" disconnecting.
+2025-11-20 16:44:15.527 -03:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2025-11-20 16:44:15.528 -03:00 [INF] HTTP GET /swagger/favicon-16x16.png responded 200 in 2.5443 ms
+2025-11-20 16:44:15.530 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5201/swagger/favicon-16x16.png - 200 665 image/png 12.9642ms
+2025-11-20 16:44:15.535 -03:00 [DBG] Connection id "0HNH8DKIFL5VV" stopped.
+2025-11-20 16:44:15.544 -03:00 [DBG] Connection id "0HNH8DKIFL600" accepted.
+2025-11-20 16:44:15.545 -03:00 [DBG] Connection id "0HNH8DKIFL600" started.
+2025-11-20 16:44:15.546 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5201/swagger/v1/swagger.json - null null
+2025-11-20 16:44:15.549 -03:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2025-11-20 16:44:15.551 -03:00 [DBG] Request did not match any endpoints
+2025-11-20 16:44:15.557 -03:00 [DBG] Executing API description provider 'EndpointMetadataApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-11-20 16:44:15.560 -03:00 [DBG] Executing API description provider 'DefaultApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-11-20 16:44:15.568 -03:00 [DBG] Executing API description provider 'VersionedApiDescriptionProvider' from assembly Asp.Versioning.Mvc.ApiExplorer v8.1.0.0.
+2025-11-20 16:44:15.705 -03:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 153.5076 ms
+2025-11-20 16:44:15.708 -03:00 [DBG] Connection id "0HNH8DKIFL600" completed keep alive response.
+2025-11-20 16:44:15.710 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5201/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 163.5495ms
+2025-11-20 16:44:29.989 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5201/api/v1/Skill - null null
+2025-11-20 16:44:29.998 -03:00 [DBG] 1 candidate(s) found for the request path '/api/v1/Skill'
+2025-11-20 16:44:30.001 -03:00 [DBG] Endpoint 'IncludIA.Api.Controllers.v1.SkillController.GetAll (IncludIA.Api)' with route pattern 'api/v{version:apiVersion}/Skill' is valid for the request path '/api/v1/Skill'
+2025-11-20 16:44:30.007 -03:00 [DBG] Request matched endpoint 'IncludIA.Api.Controllers.v1.SkillController.GetAll (IncludIA.Api)'
+2025-11-20 16:44:30.009 -03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-11-20 16:44:30.010 -03:00 [INF] Executing endpoint 'IncludIA.Api.Controllers.v1.SkillController.GetAll (IncludIA.Api)'
+2025-11-20 16:44:30.024 -03:00 [INF] Route matched with {action = "GetAll", controller = "Skill"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller IncludIA.Api.Controllers.v1.SkillController (IncludIA.Api).
+2025-11-20 16:44:30.026 -03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-11-20 16:44:30.028 -03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-11-20 16:44:30.029 -03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)","Asp.Versioning.ReportApiVersionsAttribute (Order: 0)"]
+2025-11-20 16:44:30.031 -03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-11-20 16:44:30.033 -03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)","Asp.Versioning.ReportApiVersionsAttribute (Order: 0)"]
+2025-11-20 16:44:30.035 -03:00 [DBG] Executing controller factory for controller IncludIA.Api.Controllers.v1.SkillController (IncludIA.Api)
+2025-11-20 16:44:30.039 -03:00 [INF] Executed action IncludIA.Api.Controllers.v1.SkillController.GetAll (IncludIA.Api) in 3.0766ms
+2025-11-20 16:44:30.041 -03:00 [INF] Executed endpoint 'IncludIA.Api.Controllers.v1.SkillController.GetAll (IncludIA.Api)'
+2025-11-20 16:44:30.043 -03:00 [ERR] HTTP GET /api/v1/Skill responded 500 in 33.9100 ms
+System.InvalidOperationException: Unable to resolve service for type 'IncludIA.Application.Service.SkillService' while attempting to activate 'IncludIA.Api.Controllers.v1.SkillController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-11-20 16:44:30.048 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'IncludIA.Application.Service.SkillService' while attempting to activate 'IncludIA.Api.Controllers.v1.SkillController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-20 16:44:30.055 -03:00 [DBG] Connection id "0HNH8DKIFL600" completed keep alive response.
+2025-11-20 16:44:30.057 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5201/api/v1/Skill - 500 null text/plain; charset=utf-8 67.1419ms
+2025-11-20 16:46:25.768 -03:00 [DBG] Connection id "0HNH8DKIFL600" received FIN.
+2025-11-20 16:46:25.770 -03:00 [DBG] Connection id "0HNH8DKIFL600" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-11-20 16:46:25.772 -03:00 [DBG] Connection id "0HNH8DKIFL600" disconnecting.
+2025-11-20 16:46:25.773 -03:00 [DBG] Connection id "0HNH8DKIFL600" stopped.
+2025-11-20 16:47:06.355 -03:00 [DBG] Config reload token fired. Checking for changes...
+2025-11-20 16:47:06.356 -03:00 [DBG] Middleware configuration started with options: {AllowedHosts = *, AllowEmptyHosts = True, IncludeFailureMessage = True}
+2025-11-20 16:47:06.357 -03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-11-20 16:47:06.617 -03:00 [DBG] Middleware configuration started with options: {AllowedHosts = *, AllowEmptyHosts = True, IncludeFailureMessage = True}
+2025-11-20 16:47:06.619 -03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-11-20 16:47:06.620 -03:00 [DBG] Config reload token fired. Checking for changes...
+2025-11-20 16:47:42.419 -03:00 [INF] Application is shutting down...
+2025-11-20 16:47:42.419 -03:00 [DBG] Hosting stopping
+2025-11-20 16:47:42.426 -03:00 [DBG] Hosting stopped

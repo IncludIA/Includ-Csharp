@@ -334,3 +334,5 @@ C:\Users\admin\Desktop\Fiap\Includ-Csharp\IncludIA.Api\obj\Debug\net9.0\refint\I
 C:\Users\admin\Desktop\Fiap\Includ-Csharp\IncludIA.Api\obj\Debug\net9.0\IncludIA.Api.pdb
 C:\Users\admin\Desktop\Fiap\Includ-Csharp\IncludIA.Api\obj\Debug\net9.0\IncludIA.Api.genruntimeconfig.cache
 C:\Users\admin\Desktop\Fiap\Includ-Csharp\IncludIA.Api\obj\Debug\net9.0\ref\IncludIA.Api.dll
+C:\Users\admin\Desktop\Fiap\Includ-Csharp\IncludIA.Api\bin\Debug\net9.0\DevOne.Security.Cryptography.BCrypt.dll
+C:\Users\admin\Desktop\Fiap\Includ-Csharp\IncludIA.Api\bin\Debug\net9.0\BCrypt.Net-Next.dll

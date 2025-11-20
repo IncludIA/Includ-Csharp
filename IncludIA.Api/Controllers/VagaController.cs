@@ -1,86 +1,144 @@
 ﻿using Asp.Versioning;
 using IncludIA.Application.Service;
 using IncludIA.Domain.Entities;
+using IncludIA.Api.DTOs.Vaga;
+using IncludIA.Api.DTOs.Common;
 using Microsoft.AspNetCore.Mvc;
 
-namespace IncludIA.Api.Controllers
+namespace IncludIA.Api.Controllers.v1
 {
     [ApiController]
-    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/vaga")]
     public class VagaController : ControllerBase
     {
-        private readonly VagaService _vagaService;
-        private readonly InclusaoService _inclusaoService; 
+        private readonly JobVagaService _service;
 
-        public VagaController(VagaService vagaService, InclusaoService inclusaoService)
+        public VagaController(JobVagaService service)
         {
-            _vagaService = vagaService;
-            _inclusaoService = inclusaoService;
+            _service = service;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAll([FromQuery] int page = 1, [FromQuery] int size = 10)
         {
-            var vagas = await _vagaService.GetAllAsync(page, size);
-
-            var resultado = vagas.Select(v => new
+            var vagas = await _service.GetAllAsync(page, size);
+            
+            var response = vagas.Select(v => new JobVagaResponse
             {
-                Data = v,
-                Links = new[]
-                {
-                    new { rel = "self", href = $"/api/v1/vaga/{v.Id}", method = "GET" },
-                    new { rel = "update", href = $"/api/v1/vaga/{v.Id}", method = "PUT" },
-                    new { rel = "delete", href = $"/api/v1/vaga/{v.Id}", method = "DELETE" }
-                }
+                Id = v.Id,
+                Titulo = v.Titulo,
+                Descricao = v.DescricaoInclusiva ?? v.DescricaoOriginal,
+                IsDescricaoInclusiva = !string.IsNullOrEmpty(v.DescricaoInclusiva),
+                Localizacao = v.Localizacao,
+                TipoVaga = v.TipoVaga.ToString(),
+                ModeloTrabalho = v.ModeloTrabalho.ToString(),
+                SalarioMin = v.SalarioMin,
+                SalarioMax = v.SalarioMax,
+                Beneficios = v.Beneficios,
+                IsAtiva = v.IsAtiva,
+                CreatedAt = v.CreatedAt,
+                NomeEmpresa = v.Empresa?.NomeFantasia ?? "Confidencial",
+                NomeRecrutador = v.Recruiter?.Nome,
+                Skills = v.SkillsDesejadas.Select(s => s.Nome).ToList(),
+                Links = GenerateLinks(v.Id)
             });
 
-            return Ok(resultado);
+            return Ok(response);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(Guid id)
+        {
+            var v = await _service.GetByIdAsync(id);
+            if (v == null) return NotFound();
+
+            var response = new JobVagaResponse
+            {
+                Id = v.Id,
+                Titulo = v.Titulo,
+                Descricao = v.DescricaoInclusiva ?? v.DescricaoOriginal,
+                IsDescricaoInclusiva = !string.IsNullOrEmpty(v.DescricaoInclusiva),
+                Localizacao = v.Localizacao,
+                TipoVaga = v.TipoVaga.ToString(),
+                ModeloTrabalho = v.ModeloTrabalho.ToString(),
+                SalarioMin = v.SalarioMin,
+                SalarioMax = v.SalarioMax,
+                Beneficios = v.Beneficios,
+                IsAtiva = v.IsAtiva,
+                CreatedAt = v.CreatedAt,
+                NomeEmpresa = v.Empresa?.NomeFantasia ?? "Confidencial",
+                NomeRecrutador = v.Recruiter?.Nome,
+                Skills = v.SkillsDesejadas.Select(s => s.Nome).ToList(),
+                Links = GenerateLinks(v.Id)
+            };
+
+            return Ok(response);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] Vaga vaga)
+        public async Task<IActionResult> Create([FromBody] JobVagaRequest request)
         {
-            vaga.Descricao = await _inclusaoService.TornarDescricaoInclusivaAsync(vaga.Descricao);
-            await _vagaService.CreateAsync(vaga);
-            return CreatedAtAction(nameof(GetAll), new { id = vaga.Id }, vaga);
-        }
-        
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(string id)
-        {
-            var vaga = await _vagaService.GetByIdAsync(id);
-            if (vaga == null)
+            var vaga = new JobVaga
             {
-                return NotFound();
-            }
-            return Ok(vaga);
+                Id = Guid.NewGuid(),
+                Titulo = request.Titulo,
+                DescricaoOriginal = request.DescricaoOriginal,
+                Localizacao = request.Localizacao,
+                TipoVaga = request.TipoVaga,
+                ModeloTrabalho = request.ModeloTrabalho,
+                SalarioMin = request.SalarioMin,
+                SalarioMax = request.SalarioMax,
+                Beneficios = request.Beneficios,
+                ExperienciaRequerida = request.ExperienciaRequerida,
+                RecruiterId = request.RecruiterId,
+                EmpresaId = request.EmpresaId,
+                IsAtiva = true,
+                CreatedAt = DateTime.UtcNow
+            };
+            
+            await _service.CreateAsync(vaga);
+
+            return CreatedAtAction(nameof(GetById), new { id = vaga.Id }, vaga);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(string id, [FromBody] Vaga vagaIn)
+        public async Task<IActionResult> Update(Guid id, [FromBody] JobVagaRequest request)
         {
-            var vaga = await _vagaService.GetByIdAsync(id);
-            if (vaga == null)
-            {
-                return NotFound();
-            }
-            vagaIn.Descricao = await _inclusaoService.TornarDescricaoInclusivaAsync(vagaIn.Descricao);
-            await _vagaService.UpdateAsync(id, vagaIn);
-            return NoContent(); 
+            var existingVaga = await _service.GetByIdAsync(id);
+            if (existingVaga == null) return NotFound();
+            
+            existingVaga.Titulo = request.Titulo;
+            existingVaga.DescricaoOriginal = request.DescricaoOriginal;
+            existingVaga.Localizacao = request.Localizacao;
+            existingVaga.TipoVaga = request.TipoVaga;
+            existingVaga.ModeloTrabalho = request.ModeloTrabalho;
+            existingVaga.SalarioMin = request.SalarioMin;
+            existingVaga.SalarioMax = request.SalarioMax;
+            existingVaga.Beneficios = request.Beneficios;
+            existingVaga.ExperienciaRequerida = request.ExperienciaRequerida;
+
+            await _service.UpdateAsync(existingVaga);
+
+            return NoContent();
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(string id)
+        public async Task<IActionResult> Delete(Guid id)
         {
-            var vaga = await _vagaService.GetByIdAsync(id);
-            if (vaga == null)
-            {
-                return NotFound();
-            }
-
-            await _vagaService.DeleteAsync(id);
+            await _service.DeleteAsync(id);
             return NoContent();
+        }
+
+        private List<LinkDto> GenerateLinks(Guid id)
+        {
+            return new List<LinkDto>
+            {
+                new LinkDto(Url.Action(nameof(GetById), new { id }) ?? "", "self", "GET"),
+                new LinkDto(Url.Action(nameof(Update), new { id }) ?? "", "update", "PUT"),
+                new LinkDto(Url.Action(nameof(Delete), new { id }) ?? "", "delete", "DELETE"),
+                new LinkDto($"/api/v1/match/create?jobVagaId={id}", "apply", "POST")
+            };
         }
     }
 }
