@@ -66,6 +66,7 @@ builder.Services.AddScoped<ISavedCandidateRepository, SavedCandidateRepository>(
 // 5. Injeção de Dependência - Services (Camada de Aplicação)
 // Serviços Externos (IA)
 builder.Services.AddHttpClient<InclusaoIAService>();
+builder.Services.AddSingleton<RecomendacaoMLService>();
 
 // Domain Services
 builder.Services.AddScoped<CandidateService>();

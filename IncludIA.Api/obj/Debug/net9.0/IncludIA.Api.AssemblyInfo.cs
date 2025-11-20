@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IncludIA.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c042631574b4bfbe156e2edf95112fccb04c39b4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d662d72ece24a913d29cf0e0c34f47b58113fefa")]
 [assembly: System.Reflection.AssemblyProductAttribute("IncludIA.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IncludIA.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

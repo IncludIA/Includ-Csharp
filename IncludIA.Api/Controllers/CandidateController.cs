@@ -1,6 +1,7 @@
 ﻿using Asp.Versioning;
 using IncludIA.Application.Service;
 using IncludIA.Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace IncludIA.Api.Controllers.v1
@@ -8,6 +9,7 @@ namespace IncludIA.Api.Controllers.v1
     [ApiController]
     [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}/[controller]")]
+    [Authorize]
     public class CandidateController : ControllerBase
     {
         private readonly CandidateService _service;
