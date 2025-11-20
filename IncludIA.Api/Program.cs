@@ -168,11 +168,8 @@ var app = builder.Build();
 app.UseSerilogRequestLogging(); 
 
 // Swagger habilitado apenas em desenvolvimento (ou mude conforme necessidade)
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "IncludIA API v1"));
-}
+app.UseSwagger();
+app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "IncludIA API v1"));
 
 app.UseHttpsRedirection();
 
