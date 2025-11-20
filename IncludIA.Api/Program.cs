@@ -29,7 +29,6 @@ builder.Services.AddOpenTelemetry()
             .AddConsoleExporter());
 
 builder.Services.AddSingleton<MongoDbContext>();
-builder.Services.AddScoped<InclusaoService>();
 builder.Services.AddScoped<IVagaRepository, VagaRepository>();
 builder.Services.AddScoped<VagaService>();
 builder.Services.AddScoped<ICandidateRepository, CandidateRepository>();
